@@ -11,17 +11,14 @@ class SHA256Controller:
         self.setup_commands()
     
     def setup_commands(self):
-        # Comandos pestaña Hash
         self.view.btn_generate.config(command=self.generate_hash)
         self.view.btn_verify.config(command=self.verify_hash)
         self.view.btn_clear.config(command=self.clear_all)
         
-        # Comandos pestaña Archivos
         self.view.btn_browse.config(command=self.browse_file)
         self.view.btn_encrypt_file.config(command=self.encrypt_file)
         self.view.btn_decrypt_file.config(command=self.decrypt_file)
     
-    # Métodos para pestaña Hash
     def generate_hash(self):
         text = self.view.get_text()
         if not text:
