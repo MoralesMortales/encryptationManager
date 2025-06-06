@@ -34,6 +34,14 @@ class MainView:
         )
         btn_sha.pack(pady=10)
         
+        btn_steg = tk.Button(
+            self.frame,
+            text="Esteganografía",
+            command=self.controller.open_steganography,
+            width=20, height=2
+        )
+        btn_steg.pack(pady=10)
+        
         btn_exit = tk.Button(
             self.frame,
             text="Salir",

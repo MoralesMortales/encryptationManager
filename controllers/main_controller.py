@@ -2,6 +2,7 @@ from views.main_view import MainView
 from controllers.rsa_controller import RSAController
 from controllers.aes_controller import AESController
 from controllers.sha256_controller import SHA256Controller
+from controllers.steg_controller import SteganographyController
 import tkinter as tk
 
 class MainController:
@@ -20,3 +21,7 @@ class MainController:
     def open_sha256(self):
         sha_window = tk.Toplevel(self.root)
         SHA256Controller(sha_window)
+    
+    def open_steganography(self):
+        steg_window = tk.Toplevel(self.root)
+        SteganographyController(steg_window)
