@@ -42,6 +42,15 @@ class MainView:
         )
         btn_steg.pack(pady=10)
         
+        # Nuevo botón para BitEdit
+        btn_bit_edit = tk.Button(
+            self.frame,
+            text="Editor de Bits (BitEdit)",
+            command=self.controller.open_bit_edit,
+            width=20, height=2
+        )
+        btn_bit_edit.pack(pady=10)
+        
         btn_exit = tk.Button(
             self.frame,
             text="Salir",

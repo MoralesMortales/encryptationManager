@@ -3,6 +3,8 @@ from controllers.rsa_controller import RSAController
 from controllers.aes_controller import AESController
 from controllers.sha256_controller import SHA256Controller
 from controllers.steg_controller import SteganographyController
+from controllers.bitEdit_controller import BitEditController
+
 import tkinter as tk
 
 class MainController:
@@ -10,6 +12,10 @@ class MainController:
         self.root = root
         self.view = MainView(root, self)
     
+    def open_bit_edit(self):
+        bit_edit_window = tk.Toplevel(self.root)
+        BitEditController(bit_edit_window)
+
     def open_rsa(self):
         rsa_window = tk.Toplevel(self.root)
         RSAController(rsa_window)
